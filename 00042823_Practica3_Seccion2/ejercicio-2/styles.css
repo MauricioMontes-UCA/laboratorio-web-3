@@ -1,5 +1,40 @@
 :root {
     --blue: #1e90ff;
     --white: #ffffff;
+    --pink: #e12afb;
 }
 
+/* Ok, esto es para hacer que box trabaje con flexbox */
+.box {
+    display: flex;
+    background-color: var(--pink);
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* estos son los flex items */
+.box div {
+    margin: 10px 5px;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: var(--blue);
+    /* flex-grow: 4;  esto es para que cada caja sea 4 veces más grande?*/
+    width: 33%; /* 33% de la caja */
+}
+
+.box div:first-child {
+    /* flex-grow: 12;  12 veces más grande?*/
+    width: 64%; /* 64% de la caja */
+}
+
+/* 
+En flexbox, si no se define un ancho fijo para los items, estos se ajustan
+automáticamente según su contenido y el espacio disponible en el contenedor.
+Entonces, flex-grow lo que realiza es distribuir el espacio extra entre los items,
+y dependiendo del valor de flex-grow, un item puede crecer más que otro.
+
+flex-grow: 4; significa que el item puede crecer 4 veces más que un item con flex-grow: 1.
+
+Ahora, si defines un ancho fijo (como width: 33%;), se limita el crecimiento del item. Así
+que flex-grow no tendrá efecto si el ancho ya está definido.
+*/

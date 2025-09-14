@@ -1,0 +1,40 @@
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+.payment-button {
+    width: min-content;
+    border: var(--blue) solid;
+    padding: 0.5em;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: var(--blue);
+}
+
+.payment-button p {
+    margin: 0;
+}
+
+.payment-button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.shopping-cart {
+    animation: fadeIn 3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
